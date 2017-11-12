@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-copytodownload" version="1.0">
+
+    <name>CopyToDownload</name>
+    <description>Copy a file to Download folder</description>
+    <license>MIT</license>
+    <keywords>cordova,Download,DownloadManager,file,copy</keywords>
+
+    <js-module src="www/copyToDownload.js" name="device">
+        <clobbers target="CopyToDownload" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CopyToDownload">
+                <param name="android-package" value="tonib.copytodownload.CopyToDownload"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="src/android/CopyToDownload.java" target-dir="src/tonib/copytodownload" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+    </platform>
+
+</plugin>
