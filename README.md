@@ -11,9 +11,19 @@ Tested only with Cordova 6.1
 
 # Installation
 
-https://github.com/tonib/cordova-plugin-copytodownload.git
+```bash
+cordova plugin add https://github.com/tonib/cordova-plugin-copytodownload.git
+```
 
-# API:
+or add to your config.xml file:
+
+```xml
+<widget ...>
+    <plugin name="https://github.com/tonib/cordova-plugin-copytodownload.git" />
+</widget>
+```
+
+# API
 
 ```javascript
 module.exports = window.CopyToDownload = CopyToDownload = {
@@ -31,7 +41,7 @@ module.exports = window.CopyToDownload = CopyToDownload = {
      *                                      to the download, as an String
      * @param {function}    callbackError   Callback to call if the call did fail. A parameter with the error will be passed
      */
-    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError);
+    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError );
 
 }
 ```

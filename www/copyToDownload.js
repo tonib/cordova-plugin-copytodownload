@@ -15,7 +15,7 @@ module.exports = window.CopyToDownload = CopyToDownload = {
      *                                      to the download, as an String
      * @param {function}    callbackError   Callback to call if the call did fail. A parameter with the error will be passed
      */
-    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError) {
+    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError ) {
 
         var args = [ url, title, description, isMediaScannerScannable, mimeType, showNotification ];
         return cordova.exec(callbackSuccess, callbackError, "CopyToDownload", "copyToDownload", args);
