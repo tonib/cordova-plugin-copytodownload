@@ -19,7 +19,7 @@ or add to your config.xml file:
 
 ```xml
 <widget ...>
-    <plugin name="https://github.com/tonib/cordova-plugin-copytodownload.git" />
+    <plugin name="cordova-plugin-copytodownload" spec="https://github.com/tonib/cordova-plugin-copytodownload.git#1.0" />
 </widget>
 ```
 
