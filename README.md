@@ -5,7 +5,7 @@ Download Manager app that the file was "downloaded".
 
 Additionally you can show a notification with that "download"
 
-Requires WRITE_EXTERNAL_STORAGE and INTERNET permission.
+Requires WRITE_EXTERNAL_STORAGE and INTERNET permission. It can prompt the user for a permission to write the file.
 
 Tested only with Cordova 6.1
 
