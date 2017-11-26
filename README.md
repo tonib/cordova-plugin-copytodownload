@@ -1,6 +1,6 @@
 ## Copy to Download folder
 
-Cordova plugin for Android only (API >= 12). It allows to copy a local file to the Download folder and notify the
+[Cordova](https://cordova.apache.org/) plugin for Android only (API >= 12). It allows to copy a local file to the Download folder and notify the
 Download Manager app that the file was "downloaded".
 
 Additionally you can show a notification with that "download"
@@ -12,16 +12,10 @@ Tested only with Cordova 6.1
 # Installation
 
 ```bash
-cordova plugin add https://github.com/tonib/cordova-plugin-copytodownload.git
+cordova plugin add https://github.com/tonib/cordova-plugin-copytodownload.git [--save]
 ```
 
-or add to your config.xml file:
-
-```xml
-<widget ...>
-    <plugin name="cordova-plugin-copytodownload" spec="https://github.com/tonib/cordova-plugin-copytodownload.git#1.0" />
-</widget>
-```
+Refer to Cordova documentation for other ways to install (config.xml)
 
 # API
 
