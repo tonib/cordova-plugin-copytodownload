@@ -35,19 +35,19 @@ module.exports = window.CopyToDownload = CopyToDownload = {
      *                                      to the download, as an String
      * @param {function}    callbackError   Callback to call if the call did fail. A parameter with the error will be passed
      */
-    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError );
+    copyToDownload: function( url, title, description, isMediaScannerScannable, mimeType, showNotification , callbackSuccess, callbackError ) {
+         /*...*/
+    },
 
     /**
      * Copy a file to a destination directory, with native URLs
      * @param {string} srcFileUrl URL to to the local file to copy (copy source)
      * @param {string} dstDirectoryUrl URL to the local directory where to copy (copy destination)
      * @param {function} callbackSuccess Success callback. A parameter will be passed with the new copied file URL
-     * @param {function}    callbackError   Callback to call if the call did fail. A parameter with the error will be passed
+     * @param {function} callbackError   Callback to call if the call did fail. A parameter with the error will be passed
      */
     copyNativePaths: function( srcFileUrl , dstDirectoryUrl , callbackSuccess, callbackError ) {
-
-        var args = [ srcFileUrl , dstDirectoryUrl ];
-        return cordova.exec(callbackSuccess, callbackError, "CopyToDownload", "copyNativePaths", args);
+        /*...*/
     }
 }
 ```
