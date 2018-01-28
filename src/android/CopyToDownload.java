@@ -79,7 +79,12 @@ public class CopyToDownload extends CordovaPlugin {
 
             return true;
         }
-        
+        else if( action.equals( "copyNativePaths" ) ) {
+
+            copyNativePaths(callbackContext, args);
+            return true;
+        }
+
         return false;
     }
 
@@ -220,4 +225,36 @@ public class CopyToDownload extends CordovaPlugin {
             catch(Exception ex2){}
         }
     }
+
+    /**
+     * Copy a file from native paths
+     * @param callbackContext The callback context
+     * @param args Call arguments
+     */
+    private void copyNativePaths( CallbackContext callbackContext, JSONArray args ) {
+
+        try {
+            // Get parameters
+            String srcUrl = args.getString( 0 );
+            String dstUrl = args.getString( 1 ) ;
+            
+            // Get files
+            File srcFile = new File( new URI( srcUrl ) );
+
+            File dstDirectory = new File( new URI( dstUrl ) );
+            File dstFile = new File( dstDirectory , srcFile.getName() );
+
+            // Do the copy
+            String dstFilePath = dstFile.getAbsolutePath();
+            copyFile( srcFile.getAbsolutePath() , dstFilePath );
+
+            // Return the file destination path
+            callbackContext.success( "file://" + dstFilePath );
+        }
+        catch(Exception e) {
+            Log.e("copyNativePaths", e.getMessage(), e);
+            callbackContext.error( e.getMessage() );
+        }
+    }
+
 }
