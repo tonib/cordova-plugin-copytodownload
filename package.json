@@ -1,0 +1,21 @@
+{
+    "name": "cordova-plugin-copytodownload",
+    "version": "1.2.0",
+    "description": "Cordova plugin to copy a file to the Downloads directory and notify about it to the Download Manager (Android only)",
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tonib/cordova-plugin-copytodownload.git"
+    },
+    "keywords": [
+      "downloads",
+      "copy"
+    ],
+    "author": "Toni Bennasar",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/tonib/cordova-plugin-copytodownload/issues"
+    },
+    "homepage": "https://github.com/tonib/cordova-plugin-copytodownload#readme"
+  }
+  
